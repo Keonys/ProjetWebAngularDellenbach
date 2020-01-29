@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  backendClient : 'http://localhost/newback/index.php/client',
-  backendAllClients : 'http://localhost/newback/index.php/allclients',
-  backendProduct : 'http://localhost/newback/index.php/produits',
-  backend: 'http://localhost/newback'
+  backendClient : 'http://localhost/BACK/index.php/client',
+  backendAllClients : 'http://localhost/BACK/index.php/allclients',
+  backendProduct : 'http://localhost/BACK/index.php/produits',
+  backend: 'http://localhost/BACK'
 };
 
 /*
