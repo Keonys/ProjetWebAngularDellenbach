@@ -1,0 +1,22 @@
+  <div class="p-4">
+    <div class="bg-secondary rounded">
+      <div class="container d-flex justify-content-center p-4">
+        <h2 class="text-white">Votre compte à bien été créé {{user.firstName}} </h2>
+      </div>
+      <div class="container d-flex justify-content-center p-4">
+        <fieldset class="border p-3 text-white">
+          <ul>
+              <li>Nom : {{user.name | uppercase}}</li>
+              <li>Prénom : {{user.firstName}}</li>
+              <li>Adresse : {{user.adress}}</li>
+              <li>Code Postal : {{user.cp}}</li>
+              <li>Ville : {{user.ville}}</li>
+              <li>Téléphone : {{user.tel | tel }}</li>
+              <li>E-mail : {{user.email}}</li>
+              <li>Civilité: {{user.civilite}}</li>
+              <li>Login : {{user.login}}</li>
+          </ul>
+        </fieldset>
+      </div>
+    </div>
+  </div>

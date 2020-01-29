@@ -1,0 +1,38 @@
+<div class="p-4">
+  <div class="container bg-secondary rounded p-4">
+    <table class="table table-striped mt-4 text-white">
+      <thead>
+        <tr>
+          <th scope="col">Nom</th>
+          <th scope="col">Description</th>
+          <th scope="col">Prix</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of catalogue | async">
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price }} €</td>
+          <td><button class="btn btn-danger" (click)='onClick(product)'>Supprimer</button></td>
+        </tr> 
+      </tbody>
+    </table>
+    <!-- <button class="btn btn-success ml-auto btn-block" type="button" (click)='onClickDelCata(catalogue)'>Payer ma Commande</button> -->
+    <button class="btn btn-success ml-auto btn-block payer" type="button" (click)='onClickDelCata()'>Payer ma Commande</button>
+    <div class="alert alert-success alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      Merci pour votre commande !
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.payer').click(function(){
+        $('.alert').show()
+    }) 
+});
+</script>

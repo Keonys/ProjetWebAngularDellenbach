@@ -1,0 +1,22 @@
+<div class="p-4">
+  <div class="container bg-secondary rounded p-5">
+    <div class="row">
+      <input type="text" class="form-control p-4" placeholder="Filtre par nom d'article" [(ngModel)]="searchTerm"/>
+        <div *ngFor="let product of filteredProducts">
+          <div class="col-sm m-1 mt-4">
+            <div class="card" style="width: 18rem; height: 33rem;">
+              <img src="{{ product.image }}" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">{{ product.name }} (Id : {{ product.id }})</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Prix : {{ product.price }} € </h6>
+                <p class="card-text">{{ product.description }}</p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-success ml-2" (click)='onClick(product)'>Commander</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
